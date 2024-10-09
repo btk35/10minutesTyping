@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+
+:root{
+  --main-color: #4cc9f0 ;
+}
+
+*{
+  margin:0;
+  padding:0;
+  font-size: 16px;
+  line-height: 2rem;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body{
+  background-color: #fefefe;
+  color: #001233;
+  overflow-y:scroll;
+  scrollbar-color: #c3dae0 #fefefe;
+}
+
+
+
+h1{
+  font-size: 3rem;
+}
+
+
+h1>a{
+   font-size: 3rem;
+   text-decoration: none;
+   color: #001233;
+   transition: .5s;
+}
+
+@media(max-width:  1169px){
+  h1>a{
+     font-size: 2.7rem;
+  }
+}
+
+a{
+  color: #001233;
+}
+a:hover{
+  opacity: .6;
+}
+
+
+.wrap{
+  max-width: 1180px;
+  height: 93%;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.col{
+  width: 97%;
+  margin: 0.5rem;
+}
+
+
+/*------------本体---------------*/
+.text h2{
+  margin-top: 1rem;
+}
+.done{
+  color:darkslategray;
+}
+.text,.inputarea{
+  width: 96%;
+}
+
+textarea{
+  min-width: calc(100vw*0.41);
+  min-height: calc(100vh *0.7);
+  line-height: 2rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  overflow-y: scroll;
+}
+
+
+ul{
+  display: flex;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+
+
+li{
+  font-weight: bold;
+  list-style-type: none;
+  padding:0 0.75rem;
+  border-right: var(--main-color) solid 1px;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: .5s;
+}
+@media(max-width: 1180px){
+  li{
+    display: flex;
+    flex-wrap:  wrap;
+  }
+}
+
+@media(max-width:  1449px){
+  li{
+     font-size: 0.875rem;
+  }
+}
+@media(max-width:  1169px){
+  li{
+     padding:0 0.65rem;
+  }
+}
+@media(max-width:  1069px){
+  li{
+     padding:0 0.53rem;
+  }
+}
+
+li:hover{
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+
+.text-tab{
+  overflow-y: scroll;
+  min-width: calc(100vw*0.41);
+  height: calc(100vh *0.7);
+  border-top: #666666 solid 1px;
+  border-bottom: #666666 solid 1px;
+  box-shadow: 0.5rem 0.5rem 0 white;
+}
+
+.text-tab p{
+  margin: 0px 0 1rem 0;
+  padding: 1rem 0;
+ 
+
+}
+
+.text-tab blockquote{
+  margin: 0px 0 1.25rem 0;
+  padding: 1rem 0 1rem 0;
+}
+small,cite a{
+  font-size:0.875rem;
+  color:#46677d;
+  font-style: normal;
+}
+
+
+
+/*--------------レコードエリア---------------*/
+.info{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.js-record{
+  display: flex;
+}
+
+.js-record h2{
+  width:25%;
+  height:1.25rem;
+}
+
+.js-record p{
+  width:75%;
+  height:1.25rem;
+  font-size: 0.875rem;
+}
+
+@media(max-width:1130px){
+  .js-record p{
+  font-size: 0.75rem;
+  }
+}
+
+span{
+  display: block;
+  width: 20%;
+  height: 7%;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  margin:1rem;
+}
+@media(max-width: 1130px){
+  span{
+    font-size: 0.875rem;
+  }
+}
+
+.info span:nth-of-type(1),
+.info span:nth-of-type(2),
+.info span:nth-of-type(3){
+  margin-bottom: 0;
+  padding-top: 0.75rem;
+  height: 3rem;
+  border-bottom: dotted 1px #014f86;
+}
+.info span:nth-of-type(3){
+  font-weight: bold;
+}
+
+
+button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background-color: var(--main-color);
+  border-radius: 0.5rem;
+  display: inline-block;
+  width: 100%;
+  height:100%;
+  padding-bottom: 1rem;
+  transition: .3s;
+  cursor: pointer;
+  line-height: 1.2rem;
+}
+
+  
+button:hover{
+  background-color: var(--main-color);
+  transform: scale(1.05);
+
+}
+
+/*-------------------タブjs-------------------*/
+.num-active{
+  display: block;
+  background-color: var(--main-color);
+}
+
+.text-tab p{
+  display: none;  
+}
+
+.text-tab blockquote{
+  display: none;  
+}
+  
+.text-tab .active{
+  display: block;
+}
+
+
+/*-----------------------------------------*/
+/* top */
+
+.app-link{
+  width: 80%;
+  margin:0  auto;
+  display: flex;
+}
+#top .h1-top{
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} 
+
+#top .h1-top h1{
+  font-size: 4rem;
+}
+
+.normal, .aozora{
+  text-align: center;
+  margin-top:100px; 
+  justify-content: space-between;
+  width: 45%;
+  margin: 80px;
+  background-color:  var(--main-color);
+  border-radius: 1rem;
+}
+
+#top a{
+  display: inline-block;
+  font-size:2rem;
+  padding: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  line-height: 1.;
+}
+
+#top a:hover{
+   transform: scale(1.05)
+}
+
+#top p{
+  margin-top: 40px;
+}
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.noto-sans-jp-<uniquifier> {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.apology{
+  display: none;
+}
+
+@media(max-width:960px){
+  .wrap, .index-wrap{
+    display: none;
+  }
+
+  .apology{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+  h2 a{
+    font-size: 2rem;
+    text-decoration: none;
+  }
+
+  p{
+    font-size: 1rem;
+    margin:2rem auto;
+    text-align: center;
+  }
+  .apology img{
+    vertical-align: bottom;
+    max-width: 60%;
+    height: auto;
+  }
+}
+
+footer{
+  text-align: center;
+}
